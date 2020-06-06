@@ -1,0 +1,208 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://credits/Credits.gd" type="Script" id=1]
+[ext_resource path="res://font/m6x11-font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://credits/Cleveland.wav" type="AudioStream" id=3]
+[ext_resource path="res://tilemap/tileset.png" type="Texture" id=4]
+[ext_resource path="res://campfire/smallfire6.png" type="Texture" id=5]
+[ext_resource path="res://campfire/smallfire4.png" type="Texture" id=6]
+[ext_resource path="res://campfire/smallfire2.png" type="Texture" id=7]
+[ext_resource path="res://campfire/smallfire5.png" type="Texture" id=8]
+[ext_resource path="res://campfire/smallfire3.png" type="Texture" id=9]
+[ext_resource path="res://campfire/smallfire1.png" type="Texture" id=10]
+[ext_resource path="res://mobsters/CursedEliteChonkyBearDeath3.png" type="Texture" id=11]
+[ext_resource path="res://mobsters/Elitemafiaattack3.png" type="Texture" id=12]
+[ext_resource path="res://mobsters/CursedEliteChonkyBearDeath4.png" type="Texture" id=13]
+[ext_resource path="res://mobsters/CursedEliteChonkyBearDeath2.png" type="Texture" id=14]
+[ext_resource path="res://mobsters/stalinbear4.png" type="Texture" id=15]
+[ext_resource path="res://mobsters/Elitemafiaattack4.png" type="Texture" id=16]
+[ext_resource path="res://mobsters/Elitemafiaattack2.png" type="Texture" id=17]
+[ext_resource path="res://mobsters/stalinbear5.png" type="Texture" id=18]
+[ext_resource path="res://mobsters/CursedEliteChonkyBearDeath1.png" type="Texture" id=19]
+[ext_resource path="res://mobsters/CursedEliteChonkyBearDeath5.png" type="Texture" id=20]
+[ext_resource path="res://mobsters/Elitemafiaattack1.png" type="Texture" id=21]
+[ext_resource path="res://mobsters/stalinbear2.png" type="Texture" id=22]
+[ext_resource path="res://mobsters/stalinbear1.png" type="Texture" id=23]
+[ext_resource path="res://mobsters/stalinbear3.png" type="Texture" id=24]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 23 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 15 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+} ]
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 120, 40, 40 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 2 ), SubResource( 2 ), SubResource( 2 ), SubResource( 2 ), ExtResource( 19 ), ExtResource( 14 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 21 ), ExtResource( 17 ), ExtResource( 12 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+zoom = Vector2( 0.25, 0.25 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 1.2605
+margin_top = 239.713
+margin_right = 320.26
+margin_bottom = 1894.71
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "SEVEN DAYS IN SIBERIA
+
+A game by [color=#30EF1c]CZAR NICHOLAS II LOSING THE RUSSO-JAPANESE WAR CIRCA 1905[/color] Games, a subsidiary of [color=#e37711]BLENDERCULT[/color].
+
+
+
+
+
+
+
+
+
+
+
+[color=#1234cd]PROGRAMMING[/color]:
+Gus Goucher
+Amanuel Seifu
+
+
+
+[color=#ec1101]DESIGN[/color]:
+Nicholas Miller (maps)
+Josh Byrd
+Amanuel Seifu
+Gus Goucher
+Graham Mack
+
+
+
+[color=#feef10]ART[/color]:
+Josh Byrd (tiles + bears)
+Nicholas Miller (bears)
+Graham Mack (chonk)
+Amanuel Seifu (scenes)
+Gus Goucher (misc.)
+
+
+
+[color=#ee22ee]AUDIO/MUSIC[/color]:
+Gus Goucher
+
+
+
+
+
+
+
+
+Thank you for playing!"
+text = "SEVEN DAYS IN SIBERIA
+
+A game by CZAR NICHOLAS II LOSING THE RUSSO-JAPANESE WAR CIRCA 1905 Games, a subsidiary of BLENDERCULT.
+
+
+
+
+
+
+
+
+
+
+
+PROGRAMMING:
+Gus Goucher
+Amanuel Seifu
+
+
+
+DESIGN:
+Nicholas Miller (maps)
+Josh Byrd
+Amanuel Seifu
+Gus Goucher
+Graham Mack
+
+
+
+ART:
+Josh Byrd (tiles + bears)
+Nicholas Miller (bears)
+Graham Mack (chonk)
+Amanuel Seifu (scenes)
+Gus Goucher (misc.)
+
+
+
+AUDIO/MUSIC:
+Gus Goucher
+
+
+
+
+
+
+
+
+Thank you for playing!"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="RichTextLabel"]
+position = Vector2( 23.8722, 313.909 )
+frames = SubResource( 1 )
+frame = 4
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="RichTextLabel"]
+position = Vector2( 82.9017, 463.218 )
+frames = SubResource( 3 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="RichTextLabel"]
+position = Vector2( 64.5876, 220.708 )
+frames = SubResource( 4 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="RichTextLabel"]
+position = Vector2( 115.806, 612.972 )
+frames = SubResource( 5 )
+frame = 1
+playing = true
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -8.078
+autoplay = true

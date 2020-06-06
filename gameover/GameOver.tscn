@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://font/m6x11-font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://gameover/Restart.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.25, 0.25 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -97.585
+margin_top = -51.7928
+margin_right = 94.415
+margin_bottom = 8.20716
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.411765, 0.411765, 0.411765, 1 )
+text = "YOU DIED!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = -99.6978
+margin_top = -7.59386
+margin_right = 92.3022
+margin_bottom = 52.4061
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.270588, 0.270588, 0.270588, 1 )
+text = "press any key to restart"
+align = 1
+valign = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+label_path = NodePath("../Label")
+
+[node name="Tween" type="Tween" parent="Label2"]
+[connection signal="tween_completed" from="Label2/Tween" to="Label2" method="_on_Tween_tween_completed"]

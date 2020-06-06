@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Hit_Hurt89.wav-72fd71dc95110b9261eff962b948be3d.sample"
+
+[deps]
+
+source_file="res://player/Hit_Hurt89.wav"
+dest_files=[ "res://.import/Hit_Hurt89.wav-72fd71dc95110b9261eff962b948be3d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

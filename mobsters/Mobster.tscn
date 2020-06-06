@@ -1,0 +1,82 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://mobsters/MobsterFrames.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://mobsters/Mobster.gd" type="Script" id=7]
+[ext_resource path="res://player/walk1.wav" type="AudioStream" id=8]
+[ext_resource path="res://mobsters/Hit_Hurt88.wav" type="AudioStream" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 11.9117, 1.62492 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 143.572
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 244.945
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 13.6675
+
+[sub_resource type="AudioStreamRandomPitch" id=5]
+audio_stream = ExtResource( 8 )
+random_pitch = 1.55
+
+[node name="Mobster" type="KinematicBody2D"]
+z_as_relative = false
+collision_mask = 2
+script = ExtResource( 7 )
+
+[node name="Graphics" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -10.3418 )
+frames = ExtResource( 1 )
+animation = "Walk"
+frame = 1
+playing = true
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+position = Vector2( -0.109612, -1.22783 )
+shape = SubResource( 1 )
+
+[node name="Visiblity Enter" type="Area2D" parent="."]
+visible = false
+position = Vector2( 0.524498, -8.62139 )
+collision_mask = 2
+
+[node name="Shape" type="CollisionShape2D" parent="Visiblity Enter"]
+shape = SubResource( 2 )
+
+[node name="Visibility Exit" type="Area2D" parent="."]
+visible = false
+position = Vector2( -0.340546, -8.8546 )
+collision_mask = 2
+
+[node name="Shape" type="CollisionShape2D" parent="Visibility Exit"]
+position = Vector2( 0.4972, -0.298317 )
+shape = SubResource( 3 )
+
+[node name="Hitbox" type="Area2D" parent="."]
+position = Vector2( 0.340576, -8.51405 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2( -0.736854, -5.47915 )
+shape = SubResource( 4 )
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="Step" type="AudioStreamPlayer" parent="Sounds"]
+stream = SubResource( 5 )
+bus = "Walk"
+
+[node name="Step Sound Timer" type="Timer" parent="Sounds"]
+wait_time = 0.17
+autostart = true
+
+[node name="Hurt" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 9 )
+volume_db = -9.157
+bus = "Walk"
+[connection signal="animation_finished" from="Graphics" to="." method="_on_Graphics_animation_finished"]
+[connection signal="area_entered" from="Visiblity Enter" to="." method="_on_Visiblity_Enter_area_entered"]
+[connection signal="area_exited" from="Visibility Exit" to="." method="_on_Visibility_Exit_area_exited"]
+[connection signal="area_entered" from="Hitbox" to="." method="_on_Hitbox_area_entered"]
+[connection signal="timeout" from="Sounds/Step Sound Timer" to="." method="_on_Step_Sound_Timer_timeout"]

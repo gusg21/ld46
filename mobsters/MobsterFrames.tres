@@ -1,0 +1,41 @@
+[gd_resource type="SpriteFrames" load_steps=17 format=2]
+
+[ext_resource path="res://mobsters/CursedChonkybear6.png" type="Texture" id=1]
+[ext_resource path="res://mobsters/CursedChonkybear2.png" type="Texture" id=2]
+[ext_resource path="res://mobsters/CursedChonkybear7.png" type="Texture" id=3]
+[ext_resource path="res://mobsters/CursedChonkybear1.png" type="Texture" id=4]
+[ext_resource path="res://mobsters/CursedChonkybear5.png" type="Texture" id=5]
+[ext_resource path="res://mobsters/CursedChonkybear4.png" type="Texture" id=6]
+[ext_resource path="res://mobsters/CursedChonkybear3.png" type="Texture" id=7]
+[ext_resource path="res://mobsters/cursedchonkybeardeath4.png" type="Texture" id=8]
+[ext_resource path="res://mobsters/cursedchonkybeardeath1.png" type="Texture" id=9]
+[ext_resource path="res://mobsters/cursedchonkybeardeath2.png" type="Texture" id=10]
+[ext_resource path="res://mobsters/cursedchonkybeardeath3.png" type="Texture" id=11]
+[ext_resource path="res://mobsters/cursedchonkybeardeath5.png" type="Texture" id=12]
+[ext_resource path="res://mobsters/Mafiagruntattack2.png" type="Texture" id=13]
+[ext_resource path="res://mobsters/Mafiagruntattack1.png" type="Texture" id=14]
+[ext_resource path="res://mobsters/Mafiagruntattack3.png" type="Texture" id=15]
+[ext_resource path="res://mobsters/Mafiagruntattack4.png" type="Texture" id=16]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 13 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "Attack",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "Death",
+"speed": 5.0
+} ]

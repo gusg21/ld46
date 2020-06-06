@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/AmbientTree.wav-69c3252c84e3e7c88421a1bc1e9bfd2c.sample"
+
+[deps]
+
+source_file="res://music/AmbientTree.wav"
+dest_files=[ "res://.import/AmbientTree.wav-69c3252c84e3e7c88421a1bc1e9bfd2c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

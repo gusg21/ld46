@@ -1,0 +1,41 @@
+[gd_resource type="SpriteFrames" load_steps=17 format=2]
+
+[ext_resource path="res://mobsters/CursedEliteChonkyBear_44.png" type="Texture" id=1]
+[ext_resource path="res://mobsters/CursedEliteChonkyBear_45.png" type="Texture" id=2]
+[ext_resource path="res://mobsters/CursedEliteChonkyBear_46.png" type="Texture" id=3]
+[ext_resource path="res://mobsters/CursedEliteChonkyBear_31.png" type="Texture" id=4]
+[ext_resource path="res://mobsters/CursedEliteChonkyBear_42.png" type="Texture" id=5]
+[ext_resource path="res://mobsters/CursedEliteChonkyBear_43.png" type="Texture" id=6]
+[ext_resource path="res://mobsters/CursedEliteChonkyBearDeath2.png" type="Texture" id=7]
+[ext_resource path="res://mobsters/CursedEliteChonkyBearDeath3.png" type="Texture" id=8]
+[ext_resource path="res://mobsters/CursedEliteChonkyBearDeath1.png" type="Texture" id=9]
+[ext_resource path="res://mobsters/CursedEliteChonkyBearDeath4.png" type="Texture" id=10]
+[ext_resource path="res://mobsters/CursedEliteChonkyBearDeath5.png" type="Texture" id=11]
+[ext_resource path="res://mobsters/Elitemafiaattack4.png" type="Texture" id=12]
+[ext_resource path="res://mobsters/Elitemafiaattack2.png" type="Texture" id=13]
+[ext_resource path="res://mobsters/Elitemafiaattack3.png" type="Texture" id=14]
+[ext_resource path="res://mobsters/Elitemafiaattack1.png" type="Texture" id=15]
+[ext_resource path="res://mobsters/CursedEliteChonkyBear_41.png" type="Texture" id=16]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 16 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Die",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "Attack",
+"speed": 10.0
+} ]
